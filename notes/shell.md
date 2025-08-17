@@ -4,7 +4,7 @@
 - Understanding the shell and how it works.
 
 ## Key Points
-- Shell is a program that takes commands and passes them to the kernel through system calls to execute.
+- `Shell` is a program that takes commands and passes them to the kernel through system calls to execute.
 - `sh` is the orignal Unix shell written by ***Stephen Bourne***.
 - `bash` is the replacement for the Unix shell `sh`. It was developed by the GNU project and used by default on most Linux distros.
 - The `terminal emulator` is the GUI program that emulates the old physical terminal that takes keystrokes from the user and passes them to the shell.
@@ -19,9 +19,9 @@
   ```
   > `user` is the logged in username.\
   > `linux` is the machine name.\
-  > `$` refers to a normal user.\
+  > `$` refers to a normal user.
 
-- The shell prompt of the superuser who has root priveleges
+- The shell prompt of the superuser who has root privileges
   ```bash
   user@linux:~#
   ```
