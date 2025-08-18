@@ -63,9 +63,3 @@
   ```bash
   user@linux:~$ exit
   ```
-
-## Examples
-- Real use cases: a small scenario + the command/output that solves it.
-
-## Notes
-- Extra tips, warnings, or small details that don’t fit elsewhere (like gotchas or shortcuts).
