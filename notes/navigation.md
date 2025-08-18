@@ -43,4 +43,4 @@
   ```
 
 ## Questions
-- What is the file system in low level? and how it's structured? and how does it work?
+- What is the file system in low level? and how is it structured? and how does it work?
