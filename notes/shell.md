@@ -7,8 +7,12 @@
 - `Shell` is a program that takes commands and passes them to the kernel through system calls to execute.
 - `sh` is the orignal Unix shell written by ***Stephen Bourne***.
 - `bash` is the replacement for the Unix shell `sh`. It was developed by the GNU project and used by default on most Linux distros.
-- The `terminal emulator` is the GUI program that emulates the old physical terminal that takes keystrokes from the user and passes them to the shell.
-- `TTY` is the virtual text console provided by the Linux kernel. Unlike the `terminal emulator` (which runs inside a GUI), a `TTY` runs independently of the graphical environment.
+- The `terminal`:
+  - The `old physical terminal` was any device used to interact with the computer (first teletypewriters, later video display terminals with screens). 
+  - The `terminal emulator` is the GUI program provided and managed by the desktop environment. It simulates the `TTY` to take commands as input and pass them to the shell.
+- The `TTY` (Teletypewriter):
+  - The `old physical TTY` was a physical machine with keyboard + printer/screen used to interact with computers.
+  - The Linux `TTY` is a virtual text console provided and managed directly by the Linux kernel. Unlike the `terminal emulator` (which runs inside a GUI), a `TTY` runs independently of the graphical environment.
 - Linux has multiple `TTYs`. To switch between them, use `CTRL+ALT+F2-F6` on most modern linux distros.
 - The `Linux desktop session` runs on top of a `TTY`.
 
