@@ -1,7 +1,7 @@
 # Exploring the system
 
 ## Overview
-- A quick description of what the topic is and why it matters (just 2–3 lines).
+- Navigating the file system and exploring more about it.
 
 ## Main Points
 
@@ -21,6 +21,7 @@ command --long-option arguments
 - Used for listing the contents of dirictories.
 - It uses the current directory by default, unless a different directory is passed as an argument.
 - Here's a list of common `ls` options:
+
 | Command | Note |
 | --- | --- |
 | ls | lists the contents of the current working directory in an ascending alphabetical order |
