@@ -20,7 +20,7 @@ The IT department at **GlobalTech Solutions Inc.**, a multinational technology c
 - [ ] Set account expiration for **Lucas\_Martins** exactly 90 days from today.
 
 ## Environment
-- OS: Ubuntu Ubuntu 25.04 (VM on VirtualBox)
+- OS: Ubuntu Ubuntu 25.04 (VM on VMware)
 
 ## Steps
 
