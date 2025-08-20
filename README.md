@@ -5,6 +5,7 @@
 - [What is the shell?](/notes/shell.md)
 - [Navigation](/notes/navigation.md)
 - [Exploring the system](/notes/system-exploring.md)
+- [Files and Directories](/notes/files-and-dirs.md)
 
 ## Labs
 - [New department onboarding](/labs/new-department-onboarding/README.md)
