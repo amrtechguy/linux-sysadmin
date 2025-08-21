@@ -1,21 +1,21 @@
 # Commands
 
 ## Notes
-- Short and concise notes only without details.
+- ...
 
 ## Command Info
 
 ```bash
-# types of commands.
-type cp ls cd
+# command type.
+type cd
 
-# a builtin command help.
+# for builtin commands.
 help cd
 
-# command help. (not always)
+# --help option. (not always)
 mv --help
 
-# command help. (not always)
+# -h option. (not always)
 useradd -h
 
 # section 1 -> command manual page . (not always)
@@ -55,4 +55,4 @@ foo
 ```
 
 ## Gaps
-[ ] 
+- [ ] ...
