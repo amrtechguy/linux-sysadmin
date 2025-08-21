@@ -6,7 +6,7 @@
 - [Navigation](/notes/navigation.md)
 - [Exploring the system](/notes/system-exploring.md)
 - [Files and Directories](/notes/files-and-dirs.md)
-- [Commands](/notes/commands.md)
+- [Working With Commands](/notes/commands.md)
 
 ## Labs
 - [New department onboarding](/labs/new-department-onboarding/README.md)
