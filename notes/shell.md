@@ -76,4 +76,4 @@
 - What was the old physical `TTY (Teletypewriter)`? and what was it used for?
 - Does modern Linux include any old software from Unix?
 - Does the `Terminal` or `TTY` pass the commands directly to the shell?
-- Why does Linux suport multiple `TTYs`? 
+- Why does Linux suport multiple `TTYs`?

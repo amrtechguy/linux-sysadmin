@@ -2,11 +2,13 @@
 - My Linux notes, labs, and scripts.
 
 ## Notes
-- [What is the shell?](/notes/shell.md)
+- [What Is The Shell?](/notes/shell.md)
 - [Navigation](/notes/navigation.md)
-- [Exploring the system](/notes/system-exploring.md)
-- [Files and Directories](/notes/files-and-dirs.md)
+- [Exploring The System](/notes/system-exploring.md)
+- [Files And Directories](/notes/files-and-dirs.md)
 - [Working With Commands](/notes/commands.md)
+- [Redirection](/notes/redirection.md)
+- [Shell Expansion And Quoting](/notes/shell-expansion-and-quoting.md)
 
 ## Labs
 - [New department onboarding](/labs/new-department-onboarding/README.md)
