@@ -2,6 +2,7 @@
 - My Linux notes, labs, and scripts.
 
 ## Notes
+- [How To?](/notes/how-to.md)
 - [What Is The Shell?](/notes/shell.md)
 - [Navigation](/notes/navigation.md)
 - [Exploring The System](/notes/system-exploring.md)
