@@ -10,6 +10,8 @@
 - [Working With Commands](/notes/commands.md)
 - [Redirection](/notes/redirection.md)
 - [Shell Expansion And Quoting](/notes/shell-expansion-and-quoting.md)
+- [Keyboard Tricks](/notes/keyboard-tricks.md)
+- [Permissions](/notes/permissions.md)
 
 ## Labs
 - [New department onboarding](/labs/new-department-onboarding/README.md)
