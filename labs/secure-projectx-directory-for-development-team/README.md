@@ -143,7 +143,7 @@ sudo chmod ug=rwx,o= ./shared/
 
 ```bash
 sudo chmod a=rwx ./tmp/
-sudo chmod t ./tmp/
+sudo chmod +t ./tmp/
 ```
 
 - [x] `projectx/tools/`: `alice` (owner) can manage and run the scripts, members of `devteam` can execute them, and all `other` users are denied any access.
@@ -187,10 +187,10 @@ sudo chmod ug=rwx,o= ./data/
     sudo chmod o-w shared/
     ```
 
-    - [ ] Users cannot delete or overwrite files created by others.
+    - [x] Users cannot delete or overwrite files created by others.
 
     ```bash
-    ???
+    sudo chmod +t ./shared/
     ```
 
 ### 6. Secure Temporary Area
@@ -218,4 +218,8 @@ sudo chmod ug=rwx,o= ./data/
     ```
 
 ## Gaps
-- [ ] Need to understand the special permissions `setuid bit`, `setgid bit`, and `sticky bit` with security in mind.
+- [ ] Need to understand the special permissions `setuid` `u+s`, `setgid` `g+s`, and `sticky bit` `+t` with security in mind.
+    - `setuid` `chmod u+s script.sh`: all users with `x` permission can execute it with owner's `UID`.
+    - `setgid` `chmod g+s dir/`: Any new created or copied files or dirs will inherit the root dir's `group`.
+    - `sticky bit` `chmod +t dir/`: Only the owners of files and dirs can modify or delete them.
+- [ ] Need to learn about `/etc/sudoers` and how to add rules to it.
