@@ -172,19 +172,19 @@ sudo chmod ug=rwx,o= ./data/
     - [x] All `devteam` members can read/write.
 
     ```bash
-    sudo chmod g=rw shared/*
+    sudo chmod g=rw ./shared/*
     ```
 
     - [x] Group ownership should persist for new files.
 
     ```bash
-    sudo chmod g+s shared/
+    sudo chmod g+s ./shared/
     ```
 
     - [x] Other users can only read.
 
     ```bash
-    sudo chmod o-w shared/
+    sudo chmod o-w ./shared/
     ```
 
     - [x] Users cannot delete or overwrite files created by others.
