@@ -97,10 +97,13 @@ sudo chmod u=rw,go=r ./projectx/data/results.log
 ### 1. Audit Permissions
 - [x] Generate a structured report of all files and directories with:
         - Path, owner, group, permissions.
+
         ```bash
         find . -exec ls -ldh {} \; | sudo tee report.txt
         ```
+        
 - [ ] Identify security risks such as world-writable files.
+
         ```bash
         ???
         ```
@@ -109,6 +112,7 @@ sudo chmod u=rw,go=r ./projectx/data/results.log
 - [x] Assign ownership of all files and directories to:
         - User: `alice`
         - Group: `devteam`
+
         ```bash
         # create alice's account
         sudo useradd -m -c 'Alice' -s /bin/bash alice
@@ -124,6 +128,7 @@ sudo chmod u=rw,go=r ./projectx/data/results.log
 - [x] Restrict access to `app.conf`, `db.conf`, and `secrets.key`:
         - Only `alice` should have read/write permissions.
         - No other users should access these files.
+
         ```bash
         sudo chmod u=rw,go= ./config/*
         ```
@@ -131,18 +136,25 @@ sudo chmod u=rw,go=r ./projectx/data/results.log
 ### 4. Enable Group Collaboration in Shared
 - `/srv/projectx/shared/` must support collaboration:
     - [x] All `devteam` members can read/write.
+
     ```bash
     sudo chmod g=rw shared/*
     ```
+
     - [x] Group ownership should persist for new files.
+
     ```bash
     sudo chmod g+s shared/
     ```
+
     - [x] Other users can only read.
+
     ```bash
     sudo chmod o-w shared/
     ```
+
     - [ ] Users cannot delete or overwrite files created by others.
+
     ```bash
     ???
     ```
@@ -151,6 +163,7 @@ sudo chmod u=rw,go=r ./projectx/data/results.log
 - `/srv/projectx/tmp/` should function as a safe temp space:
     - [x] All users can create files.
     - [ ] No user can delete or overwrite another user’s files.
+
     ```bash
     ???
     ```
@@ -158,10 +171,13 @@ sudo chmod u=rw,go=r ./projectx/data/results.log
 ### 6. Deploy Script Privileges
 - `/srv/projectx/tools/deploy.sh`:
     - [ ] Should run with root privileges, even if executed by non-root users.
+
     ```bash
     ???
     ```
+
     - [ ] Must remain executable for the intended team.
+
     ```bash
     ???
     ```
