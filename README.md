@@ -12,6 +12,7 @@
 - [Shell Expansion And Quoting](/notes/shell-expansion-and-quoting.md)
 - [Keyboard Tricks](/notes/keyboard-tricks.md)
 - [Permissions](/notes/permissions.md)
+- [Processes](/notes/processes.md)
 
 ## Labs
 - [New department onboarding](/labs/new-department-onboarding/README.md)
