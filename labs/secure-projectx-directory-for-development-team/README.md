@@ -95,73 +95,73 @@ sudo chmod u=rw,go=r ./projectx/data/results.log
 ## Tasks
 
 ### 1. Audit Permissions
-    - [x] Generate a structured report of all files and directories with:
-          - Path, owner, group, permissions.
-            ```bash
-            find . -exec ls -ldh {} \; | sudo tee report.txt
-            ```
-    - [ ] Identify security risks such as world-writable files.
-          ```bash
-          ???
-          ```
+- [x] Generate a structured report of all files and directories with:
+        - Path, owner, group, permissions.
+        ```bash
+        find . -exec ls -ldh {} \; | sudo tee report.txt
+        ```
+- [ ] Identify security risks such as world-writable files.
+        ```bash
+        ???
+        ```
 
 ### 2. Standardize Ownership
-    - [x] Assign ownership of all files and directories to:
-          - User: `alice`
-          - Group: `devteam`
-            ```bash
-            # create alice's account
-            sudo useradd -m -c 'Alice' -s /bin/bash alice
+- [x] Assign ownership of all files and directories to:
+        - User: `alice`
+        - Group: `devteam`
+        ```bash
+        # create alice's account
+        sudo useradd -m -c 'Alice' -s /bin/bash alice
 
-            # create devteam group
-            sudo groupadd devteam
+        # create devteam group
+        sudo groupadd devteam
 
-            # change ownership recursively
-            sudo chown -R alice:devteam .
-            ```
+        # change ownership recursively
+        sudo chown -R alice:devteam .
+        ```
 
 ### 3. Secure Configuration Files
-    - [x] Restrict access to `app.conf`, `db.conf`, and `secrets.key`:
-          - Only `alice` should have read/write permissions.
-          - No other users should access these files.
-          ```bash
-          sudo chmod u=rw,go= ./config/*
-          ```
+- [x] Restrict access to `app.conf`, `db.conf`, and `secrets.key`:
+        - Only `alice` should have read/write permissions.
+        - No other users should access these files.
+        ```bash
+        sudo chmod u=rw,go= ./config/*
+        ```
 
 ### 4. Enable Group Collaboration in Shared
-    - `/srv/projectx/shared/` must support collaboration:
-      - [x] All `devteam` members can read/write.
-      ```bash
-      sudo chmod g=rw shared/*
-      ```
-      - [x] Group ownership should persist for new files.
-      ```bash
-      sudo chmod g+s shared/
-      ```
-      - [x] Other users can only read.
-      ```bash
-      sudo chmod o-w shared/
-      ```
-      - [ ] Users cannot delete or overwrite files created by others.
-      ```bash
-      ???
-      ```
+- `/srv/projectx/shared/` must support collaboration:
+    - [x] All `devteam` members can read/write.
+    ```bash
+    sudo chmod g=rw shared/*
+    ```
+    - [x] Group ownership should persist for new files.
+    ```bash
+    sudo chmod g+s shared/
+    ```
+    - [x] Other users can only read.
+    ```bash
+    sudo chmod o-w shared/
+    ```
+    - [ ] Users cannot delete or overwrite files created by others.
+    ```bash
+    ???
+    ```
 
 ### 5. Secure Temporary Area
-    - `/srv/projectx/tmp/` should function as a safe temp space:
-      - [x] All users can create files.
-      - [ ] No user can delete or overwrite another user’s files.
-      ```bash
-      ???
-      ```
+- `/srv/projectx/tmp/` should function as a safe temp space:
+    - [x] All users can create files.
+    - [ ] No user can delete or overwrite another user’s files.
+    ```bash
+    ???
+    ```
 
 ### 6. Deploy Script Privileges
-    - `/srv/projectx/tools/deploy.sh`:
-      - [ ] Should run with root privileges, even if executed by non-root users.
-      ```bash
-      ???
-      ```
-      - [ ] Must remain executable for the intended team.
-      ```bash
-      ???
-      ```
+- `/srv/projectx/tools/deploy.sh`:
+    - [ ] Should run with root privileges, even if executed by non-root users.
+    ```bash
+    ???
+    ```
+    - [ ] Must remain executable for the intended team.
+    ```bash
+    ???
+    ```
