@@ -98,40 +98,40 @@ sudo chmod u=rw,go=r ./projectx/data/results.log
 - [x] Generate a structured report of all files and directories with:
         - Path, owner, group, permissions.
 
-        ```bash
-        find . -exec ls -ldh {} \; | sudo tee report.txt
-        ```
+```bash
+find . -exec ls -ldh {} \; | sudo tee report.txt
+```
         
 - [ ] Identify security risks such as world-writable files.
 
-        ```bash
-        ???
-        ```
+```bash
+???
+```
 
 ### 2. Standardize Ownership
 - [x] Assign ownership of all files and directories to:
         - User: `alice`
         - Group: `devteam`
 
-        ```bash
-        # create alice's account
-        sudo useradd -m -c 'Alice' -s /bin/bash alice
+```bash
+# create alice's account
+sudo useradd -m -c 'Alice' -s /bin/bash alice
 
-        # create devteam group
-        sudo groupadd devteam
+# create devteam group
+sudo groupadd devteam
 
-        # change ownership recursively
-        sudo chown -R alice:devteam .
-        ```
+# change ownership recursively
+sudo chown -R alice:devteam .
+```
 
 ### 3. Secure Configuration Files
 - [x] Restrict access to `app.conf`, `db.conf`, and `secrets.key`:
         - Only `alice` should have read/write permissions.
         - No other users should access these files.
 
-        ```bash
-        sudo chmod u=rw,go= ./config/*
-        ```
+    ```bash
+    sudo chmod u=rw,go= ./config/*
+    ```
 
 ### 4. Enable Group Collaboration in Shared
 - `/srv/projectx/shared/` must support collaboration:
