@@ -28,3 +28,5 @@ find /tmp/projectx/logs/ -type f -size 0c -exec rm {} \;
 echo "[Task] Appending +1MB log files to an archive."
 find /tmp/projectx/logs/ -type f -size +1M -exec tar -rf /tmp/projectx/backup_logs.tar {} \;
 ```
+
+- [ ] Can not use `sudo cd others_dir`!

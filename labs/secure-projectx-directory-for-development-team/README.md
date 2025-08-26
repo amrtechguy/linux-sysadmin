@@ -99,14 +99,10 @@ sudo chmod u=rw,go=r ./projectx/data/results.log
     - Path, owner, group, permissions.
 
 ```bash
-find . -exec ls -ldh {} \; | sudo tee report.txt
+find . -exec ls -ldh {} \; | sudo tee ./report.txt
 ```
         
-- [ ] Identify security risks such as world-writable files.
-
-```bash
-???
-```
+- [x] Identify security risks such as world-writable files.
 
 ### 2. Standardize Ownership
 - [x] Assign ownership of all files and directories to:
@@ -124,7 +120,45 @@ sudo groupadd devteam
 sudo chown -R alice:devteam .
 ```
 
-### 3. Secure Configuration Files
+### 3. Secure and Fix Permissions of Directories
+- [x] `projectx/`: Set permissions so only `alice` has full control, `devteam` can access and list contents, and `others` have no access.
+
+```bash
+sudo chmod u=rwx,g=rx,o= .
+```
+
+- [x] `projectx/config/`: Restrict access to `alice` only.
+
+```bash
+sudo chmod u=rwx,go= ./config/
+```
+
+- [x] `projectx/shared/`: Enable collaboration for both `alice` and `devteam` should read/write, with group ownership preserved for new files.
+
+```bash
+sudo chmod ug=rwx,o= ./shared/
+```
+
+- [x] `projectx/tmp/`: Make it world-writable for scratch use, but protect users’ files from deletion by others.
+
+```bash
+sudo chmod a=rwx ./tmp/
+sudo chmod t ./tmp/
+```
+
+- [x] `projectx/tools/`: `alice` (owner) can manage and run the scripts, members of `devteam` can execute them, and all `other` users are denied any access.
+
+```bash
+sudo chmod u=rwx,g=rx,o= ./tools/deploy.sh
+```
+
+- [x] `projectx/data/`: Allow full access to `alice` and `devteam`, but no access for others.
+
+```bash
+sudo chmod ug=rwx,o= ./data/
+```
+
+### 4. Secure Configuration Files
 - [x] Restrict access to `app.conf`, `db.conf`, and `secrets.key`:
     - Only `alice` should have read/write permissions.
     - No other users should access these files.
@@ -133,7 +167,7 @@ sudo chown -R alice:devteam .
     sudo chmod u=rw,go= ./config/*
     ```
 
-### 4. Enable Group Collaboration in Shared
+### 5. Enable Group Collaboration in Shared
 - `/srv/projectx/shared/` must support collaboration:
     - [x] All `devteam` members can read/write.
 
@@ -159,25 +193,29 @@ sudo chown -R alice:devteam .
     ???
     ```
 
-### 5. Secure Temporary Area
+### 6. Secure Temporary Area
 - `/srv/projectx/tmp/` should function as a safe temp space:
     - [x] All users can create files.
-    - [ ] No user can delete or overwrite another user’s files.
 
     ```bash
-    ???
+    sudo chmod a=rwx ./tmp/
     ```
 
-### 6. Deploy Script Privileges
+    - [x] No user can delete or overwrite another user’s files.
+
+    ```bash
+    sudo chmod t ./tmp/
+    ```
+
+### 7. Deploy Script Privileges
 - `/srv/projectx/tools/deploy.sh`:
-    - [ ] Should run with root privileges, even if executed by non-root users.
+    - [x] Should run with root privileges, even if executed by non-root users.
 
     ```bash
-    ???
+    sudo chmod u=rwx,g=rx,o= ./tools/deploy.sh
+    sudo chown root:devteam ./tools/deploy.sh
+    # add `%devteam ALL=(ALL) NOPASSWORD: /srv/projectx/tools/deploy.sh` to the file `/etc/sudoers`
     ```
 
-    - [ ] Must remain executable for the intended team.
-
-    ```bash
-    ???
-    ```
+## Gaps
+- [ ] Need to understand the special permissions `setuid bit`, `setgid bit`, and `sticky bit` with security in mind.
