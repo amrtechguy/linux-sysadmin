@@ -96,7 +96,7 @@ sudo chmod u=rw,go=r ./projectx/data/results.log
 
 ### 1. Audit Permissions
 - [x] Generate a structured report of all files and directories with:
-        - Path, owner, group, permissions.
+    - Path, owner, group, permissions.
 
 ```bash
 find . -exec ls -ldh {} \; | sudo tee report.txt
@@ -110,8 +110,8 @@ find . -exec ls -ldh {} \; | sudo tee report.txt
 
 ### 2. Standardize Ownership
 - [x] Assign ownership of all files and directories to:
-        - User: `alice`
-        - Group: `devteam`
+    - User: `alice`
+    - Group: `devteam`
 
 ```bash
 # create alice's account
@@ -126,8 +126,8 @@ sudo chown -R alice:devteam .
 
 ### 3. Secure Configuration Files
 - [x] Restrict access to `app.conf`, `db.conf`, and `secrets.key`:
-        - Only `alice` should have read/write permissions.
-        - No other users should access these files.
+    - Only `alice` should have read/write permissions.
+    - No other users should access these files.
 
     ```bash
     sudo chmod u=rw,go= ./config/*
