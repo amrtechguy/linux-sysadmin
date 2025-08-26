@@ -1,4 +1,4 @@
-# Secure and Standardize Projectx Directory for Development Team
+# Secure Projectx Directory for Development Team
 
 ## Scenario
 The `/srv/projectx/` directory was provisioned by the sysadmin for a new development initiative.
