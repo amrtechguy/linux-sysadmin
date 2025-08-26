@@ -15,6 +15,7 @@
 
 ## Labs
 - [New department onboarding](/labs/new-department-onboarding/README.md)
+- [Secure and Standardize Projectx Directory](/labs/secure-projectx-directory-for-development-team/)
 
 ## Scripts
 - Not yet.
