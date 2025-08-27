@@ -15,8 +15,9 @@
 - [Processes](/notes/processes.md)
 
 ## Labs
-- [New department onboarding](/labs/new-department-onboarding/README.md)
+- [New department onboarding](/labs/new-department-onboarding/)
 - [Secure Projectx Directory](/labs/secure-projectx-directory-for-development-team/)
+- [Process Management](/labs/process-management/)
 
 ## Scripts
 - Not yet.
