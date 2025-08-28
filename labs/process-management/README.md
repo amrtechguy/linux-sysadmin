@@ -3,103 +3,127 @@
 ## Tasks
 
 ### 1. Inspect Running Processes
-- [ ] List all processes owned by your current user (manual check).
+- [x] List all processes owned by your current user.
 
 ```bash
+ps -fu $USER
 ```
 
-- [ ] Show only their PID and command name (manual check).
+- [x] Show only their PID and command name.
 
 ```bash
+ps -u $USER -o pid,comm
 ```
 
-- [ ] Find the parent process of your current shell and display its details (manual check).
+- [x] Find the parent process of your current shell and display its details.
 
 ```bash
+ps -p $(ps -p $(echo $$) -o ppid=) -f
 ```
 
 ### 2. Trace Process Hierarchy
 
-- [ ] Starting from your current shell, follow its parent processes until you reach the init/systemd process (manual check).
+- [x] Starting from your current shell, follow its parent processes until you reach the init/systemd process.
 
 ```bash
+pstree -ps $(echo $$)
 ```
 
-- [ ] Visualize the hierarchy in a tree format (manual check).
+- [x] At each step, display the command name, its arguments, and its PID.
 
 ```bash
-```
-
-- [ ] Compare the output of your method with the tree format (manual check).
-
-```bash
+pstree -aps $(echo $$)
 ```
 
 ### 3. Analyze Resource Usage
 
-- [ ] List all processes owned by your user (manual check).
+- [x] List all processes owned by your user.
 
 ```bash
+ps -fu $USER
 ```
 
-- [ ] Show CPU and memory usage for each (manual check).
+- [x] Show CPU and memory usage for each.
 
 ```bash
+ps -u $USER -o pid,ppid,uid,cmd,%cpu,%mem
 ```
 
-- [ ] Sort to find the top CPU consumers (manual check).
+- [x] Sort to find the top CPU consumers.
 
 ```bash
+ps -u $USER -o pid,ppid,uid,cmd,%cpu,%mem --sort=-%cpu
 ```
 
-- [ ] Sort to find the top memory consumers (manual check).
+- [x] Sort to find the top memory consumers.
 
 ```bash
+ps -u $USER -o pid,ppid,uid,cmd,%cpu,%mem --sort=-%mem
 ```
 
 ### 4. Manage Jobs in the Shell
 
-- [ ] Start a long-running background job (manual check).
+- [x] Start a long-running background job.
 
 ```bash
+xlogo &
 ```
 
-- [ ] List jobs running in the background (manual check).
+- [x] List jobs running in the background.
 
 ```bash
+jobs
 ```
 
-- [ ] Bring a job to the foreground (manual check).
+- [x] Bring a job to the foreground.
 
 ```bash
+fg %<jobspec>
 ```
 
-- [ ] Send a job back to the background (manual check).
+- [x] Send a job back to the background.
 
 ```bash
+CTRL+Z
 ```
 
 ### 5. Signals & Process Control
 
-- [ ] Start a test process and stop it with a signal (manual check).
+- [x] Start a test process and stop it with a signal.
 
 ```bash
+xlogo &
+kill -TSTP <pid>
+jobs
 ```
 
-- [ ] Resume the stopped process (manual check).
+- [x] Resume the stopped process.
 
 ```bash
+jobs
+kill -CONT %<jobspec>
+jobs
 ```
 
-- [ ] Gracefully terminate a process (manual check).
+- [x] Gracefully terminate a process.
 
 ```bash
+jobs
+kill -TERM %<jobspec>
+jobs
 ```
 
-- [ ] Force-kill a process (manual check).
+- [ ] Force-kill a process.
 
 ```bash
+jobs
+kill -KILL %<jobspec>
+jobs
 ```
+
+## Notes
+- `pstree`: its output attributes of processes are limited.
+- `ps`: maybe `%cpu` reads `+%100`, because `%cpu` in `ps` shows the sum across all cores or multiple used threads.
 
 ## Gaps
 - [ ] ...
