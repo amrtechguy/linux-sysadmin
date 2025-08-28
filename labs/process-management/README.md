@@ -113,7 +113,7 @@ kill -TERM %<jobspec>
 jobs
 ```
 
-- [ ] Force-kill a process.
+- [x] Force-kill a process.
 
 ```bash
 jobs
