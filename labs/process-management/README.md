@@ -124,6 +124,3 @@ jobs
 ## Notes
 - `pstree`: its output attributes of processes are limited.
 - `ps`: maybe `%cpu` reads `+%100`, because `%cpu` in `ps` shows the sum across all cores or multiple used threads.
-
-## Gaps
-- [ ] ...

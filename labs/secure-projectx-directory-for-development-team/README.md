@@ -209,9 +209,10 @@ sudo chmod ug=rwx,o= ./data/
 
 ### 7. Deploy Script Privileges
 - `/srv/projectx/tools/deploy.sh`:
-    - [x] Should run with root privileges, even if executed by non-root users.
+    - [ ] Should run with root privileges, even if executed by non-root users.
 
     ```bash
+    # Not sure about this solution yet
     sudo chmod u=rwx,g=rx,o= ./tools/deploy.sh
     sudo chown root:devteam ./tools/deploy.sh
     # add `%devteam ALL=(ALL) NOPASSWORD: /srv/projectx/tools/deploy.sh` to the file `/etc/sudoers`
