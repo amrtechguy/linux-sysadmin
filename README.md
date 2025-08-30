@@ -13,11 +13,14 @@
 - [Keyboard Tricks](/notes/keyboard-tricks.md)
 - [Permissions](/notes/permissions.md)
 - [Processes](/notes/processes.md)
+- [The Environment](/notes/the-environment.md)
+- [VI Basics](/notes/vi.md)
 
 ## Labs
 - [New department onboarding](/labs/new-department-onboarding/)
 - [Secure Projectx Directory](/labs/secure-projectx-directory-for-development-team/)
 - [Process Management](/labs/process-management/)
+- [Environment Lab](/labs/environment-lab/)
 
 ## Scripts
 - Not yet.
