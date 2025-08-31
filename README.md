@@ -21,6 +21,7 @@
 - [Secure Projectx Directory](/labs/secure-projectx-directory-for-development-team/)
 - [Process Management](/labs/process-management/)
 - [Environment Lab](/labs/environment-lab/)
+- [VI Lab](/labs/vi-lab/)
 
 ## Scripts
 - Not yet.
