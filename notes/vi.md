@@ -4,7 +4,7 @@
 - vi vs vim.
 - command mode `ESC` vs insert mode `i`.
 
-## Subtopic Title
+## Title
 
 ```bash
 # short comment

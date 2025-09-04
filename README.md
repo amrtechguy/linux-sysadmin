@@ -15,6 +15,8 @@
 - [Processes](/notes/processes.md)
 - [The Environment](/notes/the-environment.md)
 - [VI Basics](/notes/vi.md)
+- [Package Management](/notes/package-management.md)
+- [Storage Media](/notes/storage-media.md)
 
 ## Labs
 - [New department onboarding](/labs/new-department-onboarding/)
