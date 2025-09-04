@@ -24,6 +24,7 @@
 - [Process Management](/labs/process-management/)
 - [Environment Lab](/labs/environment-lab/)
 - [VI Lab](/labs/vi-lab/)
+- [Provisioning Storage](/labs/provisioning-storage/)
 
 ## Scripts
 - Not yet.
