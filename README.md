@@ -17,6 +17,11 @@
 - [VI Basics](/notes/vi.md)
 - [Package Management](/notes/package-management.md)
 - [Storage Media](/notes/storage-media.md)
+- [Networking](/notes/networking.md)
+- [Searching For Files](/notes/searching-for-files.md)
+- [Archiving and Backup](/notes/archiving-and-backup.md)
+- [Regular Expressions](/notes/regular-expressions.md)
+- [Text Processing](/notes/text-processing.md) 
 
 ## Labs
 - [New department onboarding](/labs/new-department-onboarding/)

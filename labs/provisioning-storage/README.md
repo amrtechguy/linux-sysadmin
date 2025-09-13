@@ -146,7 +146,7 @@ rm -rf my_test/
 ```
 
 ## Notes
-- ...
+- Some commands need `sudo` to display all possible results.
 
 ## Gaps
-- [ ] ...
+- [ ] How to update my new group membership without `su - me` or logging out?
