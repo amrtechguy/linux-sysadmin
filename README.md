@@ -21,7 +21,8 @@
 - [Searching For Files](/notes/searching-for-files.md)
 - [Archiving and Backup](/notes/archiving-and-backup.md)
 - [Regular Expressions](/notes/regular-expressions.md)
-- [Text Processing](/notes/text-processing.md) 
+- [Text Processing](/notes/text-processing.md)
+- [Formatting Output](/notes/formatting-output.md)
 
 ## Labs
 - [New department onboarding](/labs/new-department-onboarding/)
