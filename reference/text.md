@@ -31,6 +31,13 @@ input...
 
 ## Search
 
+**grep**
+
+```bash
+ls -lR ~ > home.txt 
+# grep only matching text, using extended regex
+grep -oE '[[:digit:]]{2}:[:digit:]]{2}'
+```
 
 ## Edit
 
